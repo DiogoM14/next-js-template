@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prettier-format": "prettier --config prettier.config.js src/**/*.{ts,tsx} --write",
+    "lint": "eslint src/** --ext .{tsx,ts} --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "postcss": "^8.4.5",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.1",
+    "tailwindcss": "^3.0.7",
+    "typescript": "4.5.4"
+  },
+  "lint-staged": {
+    "*.{tsx,ts}": [
+      "prettier --config prettier.config.js --write",
+      "eslint --max-warnings 0"
+    ]
+  }
+}
